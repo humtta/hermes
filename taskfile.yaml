@@ -5,6 +5,14 @@ version: "3"
 silent: true
 
 tasks:
-  format: go fmt ./...
-  lint: go vet ./...
-  check: task format lint
+  format:
+    desc: Formats Go code
+    cmd: go fmt ./...
+
+  lint:
+    desc: Lints Go code
+    cmd: go vet ./...
+
+  check:
+    desc: Formats and lints Go code
+    cmd: task format lint
