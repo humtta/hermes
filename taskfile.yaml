@@ -5,6 +5,10 @@ version: "3"
 silent: true
 
 tasks:
+  build:
+    desc: Builds the CLI
+    cmd: go build -o ./out/hermes ./cmd/hermes/
+
   format:
     desc: Formats Go code
     cmd: go fmt ./...
